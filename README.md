@@ -17,6 +17,6 @@ mvn spring-boot:run
 
 ## Notes:
 - Took around 5h
-- First 1h burned on having maven repository initiated for older springboot version -> application was terminating immediatelly after start -> local maven repo deletition helped
+- First 1h burned on having maven repository initiated for older springboot version -> application was terminating immediatelly after start -> local maven repo deletion helped
 - Config Endpoint is tested properly, Projects endpoint has just basic tests - need to go to sleep :-)
-- Not sure if 'render' projects in Javascript was ment to process the Response inside Javascript - I took the path of processing that in Java as this was easier for me
+- Not sure if 'render' projects in Javascript was ment to process/parse the response inside Javascript - I took the path of processing that in Java as this was easier for me
