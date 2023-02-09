@@ -12,12 +12,11 @@ Port 8080 must not be in use or changed in ```/src/main/resources/application.pr
 mvn spring-boot:run
 
 ## Endpoints: (adjust if port was changed)
-Setup page - http://localhost:8080/config
-Projects page - http://localhost:8080/projects
-
+- Setup page - http://localhost:8080/config
+- Projects page - http://localhost:8080/projects (use 'Load Projects' button for Ajax call loading items)
+- 
 ##Notes:
 - Took around 5h
-
-- First 1h burned on having maven repository initiated for older springboot version -> application was terminating immediatelly after start -> maven repo deletition helped
-- Config Endpoint is tested properly, Projects endpoint has just basic tests - need to ho to sleep ;-)
-- Not sure if 'render' projects in Javascript was ment to process the Response inside Javascript - I took the path of processing that in Java as this is easier for me
+- First 1h burned on having maven repository initiated for older springboot version -> application was terminating immediatelly after start -> local maven repo deletition helped
+- Config Endpoint is tested properly, Projects endpoint has just basic tests - need to go to sleep :-)
+- Not sure if 'render' projects in Javascript was ment to process the Response inside Javascript - I took the path of processing that in Java as this was easier for me
