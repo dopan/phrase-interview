@@ -1,0 +1,1 @@
+delete from config where id = 1;

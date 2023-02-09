@@ -1,0 +1,31 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Projects</title>
+</head>
+<body>
+<h1>Projects:</h1>
+<input id="loadProjects" type="submit" value="Load Projects" />
+<div id="projects"></div>
+
+<script>
+  $("#loadProjects").on("click", function(e) {
+    e.preventDefault();
+    $("#projects").html("");
+    $.ajax({
+      type: "GET",
+      url: "http://localhost:8080/fetchProjects",
+      success: function (response) {
+        console.log(response);
+        $("#projects").append(response);
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+        console.log(xhr.status);
+        console.log(thrownError);
+        $("#projects").append("ERROR: Cannot load project from Phrase! See the app logs for more details...");
+      }
+    });
+  });
+</script>
+</body>
+</html>

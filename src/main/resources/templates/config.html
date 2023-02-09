@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head><title>Home Page</title></head>
+<body>
+<h1>Current credentials:</h1>
+Username: <span th:text="${currentConfig.username}"/>
+<br/>
+Password: <span th:text="${currentConfig.password}"/>
+<form th:object="${config}" th:action="@{/config}" method="POST">
+    <fieldset>
+        <h2>Change credentials</h2>
+        Username: <input type="text" th:field="${config.username}" th:value="${config.username}"/>
+        Password: <input type="text" th:field="${config.password}"  th:value="${config.password}"/>
+        <input type="submit" value="Apply" />
+    </fieldset>
+</form>
+<p th:if="${#fields.hasErrors('config.username')}">Username cannot be empty!</p>
+<p th:if="${#fields.hasErrors('config.password')}">Password cannot be empty!</p>
+</body>
+</html>
