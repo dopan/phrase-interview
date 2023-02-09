@@ -6,7 +6,7 @@ https://docs.google.com/document/d/1ilLzH8lz8aREG_lmGX2d_gaRcTBvOfteB5Hrvk18oWA/
 - Maven 3.8.6+
 
 ## Prequisites:
-Port 8080 must not be in use or changed in /src/main/resources/application.properties
+Port 8080 must not be in use or changed in ```/src/main/resources/application.properties```
 
 ## Compile & run:
 mvn spring-boot:run
