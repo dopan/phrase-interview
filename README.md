@@ -15,7 +15,7 @@ mvn spring-boot:run
 - Setup page - http://localhost:8080/config
 - Projects page - http://localhost:8080/projects (use 'Load Projects' button for Ajax call loading items)
 
-##Notes:
+## Notes:
 - Took around 5h
 - First 1h burned on having maven repository initiated for older springboot version -> application was terminating immediatelly after start -> local maven repo deletition helped
 - Config Endpoint is tested properly, Projects endpoint has just basic tests - need to go to sleep :-)
